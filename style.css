@@ -1,83 +1,74 @@
+/* Reset dasar dan penempatan di tengah layar */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec; /* Latar belakang pink muda */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Mencegah scrollbar muncul saat tombol lari */
+}
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', sans-serif;
-    }
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 400px;
+    width: 90%;
+}
 
-    body {
-        background: #1e1e2f;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+/* Pengaturan Gambar */
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
 
-    .container {
-        background: #ffecec;
-        width: 340px;
-        padding: 25px;
-        border-radius: 16px;
-        text-align: center;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        position: relative;
-        overflow: hidden;
-    }
+h2 {
+    color: #d81b60;
+    margin-bottom: 30px;
+}
 
-    .question-container img {
-        width: 120px;
-        margin-bottom: 15px;
-    }
+/* Pengaturan Tombol */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
 
-    h2 {
-        color: #333;
-        margin-bottom: 20px;
-    }
+button {
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
 
-    .button-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        position: relative;
-        height: 50px;
-    }
+.yes-btn {
+    background-color: #4CAF50; /* Hijau */
+    color: white;
+}
 
-    button {
-        padding: 10px 25px;
-        border: none;
-        border-radius: 20px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: 0.3s;
-        position: absolute;
-    }
+.yes-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
 
-    .yes-btn {
-        background: #ff6b81;
-        color: white;
-        left: 50%;
-        transform: translateX(-60px);
-    }
+.no-btn {
+    background-color: #f44336; /* Merah */
+    color: white;
+}
 
-    .no-btn {
-        background: #dcdcdc;
-        color: #333;
-        left: 50%;
-        transform: translateX(20px);
-    }
-
-    .result-container {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .result-container img {
-        width: 140px;
-        margin-bottom: 15px;
-    }
-
-    .result-container h2 {
-        color: #ff4d6d;
-    }
+/* Kotak Hasil (Wajib display: none agar tersembunyi dulu) */
+.result-container {
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
